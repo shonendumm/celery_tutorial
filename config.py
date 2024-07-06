@@ -28,8 +28,8 @@ def create_app() -> Flask:
     app = Flask(__name__)
     app.config.from_mapping(
         CELERY=dict(
-            broker_url="redis://localhost",
-            result_backend="redis://localhost",
+            broker_url='amqp://myuser:123456@localhost:5672/myvhost',
+            result_backend='rpc://',
             task_ignore_result=True,
         ),
     )

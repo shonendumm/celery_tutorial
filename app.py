@@ -45,3 +45,9 @@ if __name__ == "__main__":
 
 # Retrieve the result of the task by sending a GET request to http://localhost:5000/get_result?result_id=<result_id>
 # curl http://localhost:5000/get_result?result_id=<result_id>
+
+
+
+# Run rabbitmq server using rabbitmq-server
+# Run the Celery worker using celery -A tasks.celery_app worker --loglevel=info
+# Refer to https://docs.celeryq.dev/en/stable/getting-started/backends-and-brokers/rabbitmq.html#configuring-the-system-host-name 
